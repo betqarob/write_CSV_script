@@ -1,6 +1,6 @@
 import csv, os
 
-test = ['Lidar 1', 'Lidar 2']
+test = ['Lidar 1', 'Lidar 2', 'Lidar 3', 'Lidar 4', 'Lidar 5', 'Lidar 6', 'Lidar 7', 'Lidar 8']
 data_list = ["Null", "Null"]
 
 
