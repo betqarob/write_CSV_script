@@ -1,7 +1,7 @@
 import serial, time
 from script_csv import * 
 
-SIZE = 2
+SIZE = 7 # change number depending on the amount of lidars
 BAUD_RATE = 115200
 DEV = "/dev/ttyUSB"
 
@@ -40,8 +40,10 @@ class RangeRead:
                         low = int(recv[2].encode('hex'), 16)
                         high = int(recv[3].encode('hex'), 16)
                         distance = low + (high << 8)
+                        
                         script.data_append(distance, x)
-                        print(distance, 'mm')
+                        #print(distance, 'mm')
+                        # change the sleep time to change how many data points you are collecting [if you want it to be live or record every 3 seconds]
                         time.sleep(.5)
             script.append_csv('testing1.csv')
 
